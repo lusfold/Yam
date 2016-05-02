@@ -1,0 +1,37 @@
+<resources>
+    <string name="app_name">Yam</string>
+    <string name="email">Email</string>
+    <string name="recipient">Recipient :</string>
+    <string name="time">Time :</string>
+    <string name="sender">Sender :</string>
+    <string name="nickname">Nickname</string>
+    <string name="password">Password</string>
+    <string name="subject">Subject</string>
+    <string name="content">Content</string>
+    <string name="title_contact_edit">Edit Contact</string>
+    <string name="title_mail_edit"> Edit Mail</string>
+    <string name="title_account_edit">Edit Account</string>
+
+    <string name="action_save">Save</string>
+    <string name="action_send">Send</string>
+
+    <string name="pick_from_album">Album</string>
+    <string name="camera">Camera</string>
+    <string name="delete">Delete</string>
+    <string name="cancle">Cancle</string>
+
+    <string name="error_can_not_open_camera">Can not open camera!</string>
+    <string name="error_email">Please type a correct email</string>
+    <string name="error_nickname">Please type a nickname</string>
+    <string name="error_password">Please type your password</string>
+    <string name="error_save">Save failed</string>
+    <string name="error_subject">Please type a subject</string>
+    <string name="error_no_account">Please add a account first</string>
+    <string name="error_no_recipient">Please add a contact first</string>
+
+    <string name="loading">Loading...</string>
+
+    <string name="error_load">Load failed</string>
+    <string name="error_send">Send failed</string>
+    <string name="error_delete">Delete failed</string>
+</resources>

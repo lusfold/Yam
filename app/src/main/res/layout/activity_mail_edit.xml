@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@+id/main_layout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:gravity="center_horizontal">
+
+    <include layout="@layout/common_toolbar"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/main_tab_height">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="16dp"
+                android:gravity="center_vertical"
+                android:layout_height="48dp">
+                <TextView
+                    android:layout_width="80dp"
+                    android:gravity="right"
+                    android:text="@string/sender"
+                    android:layout_height="wrap_content"/>
+                <Spinner
+                    android:id="@+id/sender_spinner"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="16dp"
+                android:gravity="center_vertical"
+                android:layout_height="48dp">
+                <TextView
+                    android:layout_width="80dp"
+                    android:gravity="right"
+                    android:text="@string/recipient"
+                    android:layout_height="wrap_content"/>
+                <Spinner
+                    android:id="@+id/recipient_spinner"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="16dp"
+                android:gravity="center_vertical"
+                android:layout_height="48dp">
+                <TextView
+                    android:layout_width="80dp"
+                    android:gravity="right"
+                    android:text="@string/time"
+                    android:layout_height="wrap_content"/>
+                <Spinner
+                    android:id="@+id/time_spinner"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+
+
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/subject_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="16dp">
+
+                <EditText
+                    android:id="@+id/subject_edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/subject"/>
+            </android.support.design.widget.TextInputLayout>
+
+            <EditText
+                android:id="@+id/content_edit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:minHeight="200dp"
+                android:gravity="top"
+                android:hint="@string/content"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="16dp"/>
+        </LinearLayout>
+    </ScrollView>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/float_button"
+        android:layout_width="@dimen/main_float_button_size"
+        android:layout_height="@dimen/main_float_button_size"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="@dimen/main_float_button_size"
+        android:layout_marginRight="@dimen/main_float_button_size"
+        android:src="@mipmap/plus"/>
+</RelativeLayout>

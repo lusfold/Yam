@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/main_tab_height"
+    android:elevation="@dimen/main_tab_elevation"
+    android:background="@color/colorPrimary">
+
+    <LinearLayout
+        android:id="@+id/mail_layout"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:clickable="true"
+        android:background="@drawable/main_tab_background"
+        android:gravity="center">
+        <ImageView
+            android:id="@+id/mail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/main_tab_mail"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/draft_layout"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:clickable="true"
+        android:background="@drawable/main_tab_background"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/draft"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/main_tab_draft"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/contact_layout"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:clickable="true"
+        android:background="@drawable/main_tab_background"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/contact"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/main_tab_contact"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/user_layout"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:clickable="true"
+        android:background="@drawable/main_tab_background"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/user"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/main_tab_user"/>
+    </LinearLayout>
+</LinearLayout>
