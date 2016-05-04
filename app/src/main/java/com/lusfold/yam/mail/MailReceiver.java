@@ -4,8 +4,12 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 
+import com.lusfold.yam.event.UpdateMailDraftEvent;
+import com.lusfold.yam.event.UpdateMailSentEvent;
 import com.lusfold.yam.repository.CacheService;
 import com.lusfold.yam.repository.bean.Mail;
+
+import org.greenrobot.eventbus.EventBus;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -36,9 +40,8 @@ public class MailReceiver extends BroadcastReceiver {
             gmailSender.sendMail(canSend.get(i), 0, new MailSender.Callback() {
                 @Override
                 public void onResult(Mail mail, Throwable throwable) {
-                    CacheService.delete(mail);
-                    mail.setStatus(throwable == null?Mail.SENT:Mail.FAIL);
-                    CacheService.saveOrUpdateMailSent(mail);
+                    EventBus.getDefault().post(new UpdateMailDraftEvent());
+                    EventBus.getDefault().post(new UpdateMailSentEvent());
                 }
             },context);
         }

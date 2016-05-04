@@ -97,6 +97,7 @@ public class GmailSender implements MailSender {
             AlarmManager am = (AlarmManager) context.getSystemService(Context.ALARM_SERVICE);
             am.set(AlarmManager.RTC_WAKEUP,mail.getTimeToSend(), sender);
             callback.onResult(mail, null);
+            return;
         }
         new Thread(){
             @Override
@@ -137,8 +138,10 @@ public class GmailSender implements MailSender {
                         message.setRecipient(Message.RecipientType.TO, new InternetAddress(recipients));
                     Transport.send(message);
                     mail.setStatus(Mail.SENT);
-                    CacheService.delete(mail);
-                    mail.setKey(null);
+                    if (!StringUtils.isEmpty(mail.getKey())){
+                        CacheService.delete(mail);
+                        mail.setKey(null);
+                    }
                     CacheService.saveOrUpdateMailSent(mail);
                     if (callback != null) {
                         callback.onResult(mail, null);
